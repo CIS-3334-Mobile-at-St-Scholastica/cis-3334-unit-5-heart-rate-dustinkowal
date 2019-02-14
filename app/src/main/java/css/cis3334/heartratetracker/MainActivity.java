@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //setup
+        tvSelect = (TextView) findViewById(R.id.tvSelect);
+        lvHeartRates = (ListView) findViewById(R.id.lvHeartRates);
+
         heartRateList = new HeartRateList();
         heartRateList.InitRandomElderly();
 

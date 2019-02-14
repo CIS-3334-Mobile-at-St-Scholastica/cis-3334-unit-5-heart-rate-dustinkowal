@@ -20,6 +20,5 @@
     <ListView
         android:id="@+id/lvHeartRates"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:entries="@string/lv_heart_rates" />
+        android:layout_height="match_parent" />
 </LinearLayout>
