@@ -5,7 +5,4 @@
     <string name="text_view_p">Pulse:</string>
     <string name="text_view_pulse">99.9</string>
 
-    <string-array name="lv_heart_rate">
-
-    </string-array>
 </resources>
