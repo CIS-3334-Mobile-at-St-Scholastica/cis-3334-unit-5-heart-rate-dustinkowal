@@ -4,5 +4,8 @@
     <string name="text_view_top">Select a heart measurement</string>
     <string name="text_view_p">Pulse:</string>
     <string name="text_view_pulse">99.9</string>
+    <string name="text_view_r">Range:</string>
+    <string name="text_view_range">Temp Range</string>
+    <string name="text_view_desc">Temp Description</string>
 
 </resources>

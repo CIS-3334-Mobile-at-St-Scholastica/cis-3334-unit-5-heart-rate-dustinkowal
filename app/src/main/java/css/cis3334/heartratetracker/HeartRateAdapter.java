@@ -31,6 +31,8 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         this.hrList = hrList;
     }
 
+
+
     /**
      * This is called automatically to display each item in the list.
      *    Here you must fill the layout for one row or item in the list
@@ -50,6 +52,38 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
 
         TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
         tvPulse.setText(hr.getPulse().toString());
+
+        //Assignment #5
+        //setup for range and description
+        TextView tvRange = (TextView) view.findViewById(R.id.textViewRange);
+        TextView tvDescription = (TextView) view.findViewById(R.id.textViewDescription);
+
+        tvRange.setText(hr.getRangeName().toString());
+        tvDescription.setText(hr.getRangeDescrtiption().toString());
+
+        //finds correct color of range
+        int range = hr.getRange();
+
+        if(range == 1) {
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorModerate));
+        }
+        else if(range == 2){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorEndurance));
+        }
+        else if(range == 3){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorAerobic));
+        }
+        else if(range == 4){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorAnaerobic));
+        }
+        else if(range == 5){
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorRedZone));
+        }
+        else{
+            tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorResting));
+        }
+
+
 
         return(view);
     }

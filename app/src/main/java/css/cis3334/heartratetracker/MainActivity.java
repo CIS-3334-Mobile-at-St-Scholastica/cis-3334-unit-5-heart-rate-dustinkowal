@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);
         lvHeartRates.setAdapter(hrAdapter);
 
+
         lvHeartRates.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
