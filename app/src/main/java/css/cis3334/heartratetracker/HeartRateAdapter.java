@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Tom Gibbons in Feb 2017.
  * For the CIS 3334 class at St. Scholastica
@@ -61,9 +64,18 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         tvRange.setText(hr.getRangeName().toString());
         tvDescription.setText(hr.getRangeDescrtiption().toString());
 
-        //finds correct color of range
+        Map<Integer, Integer> colorMap = new HashMap<>();
+        colorMap.put(0, R.color.colorResting);
+        colorMap.put(1, R.color.colorModerate);
+        colorMap.put(2, R.color.colorEndurance);
+        colorMap.put(3, R.color.colorAerobic);
+        colorMap.put(4, R.color.colorAnaerobic);
+        colorMap.put(5, R.color.colorRedZone);
         int range = hr.getRange();
+        tvRange.setTextColor(ContextCompat.getColor(context, colorMap.get(range)));
+        //finds correct color of range
 
+        /*
         if(range == 1) {
             tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorModerate));
         }
@@ -82,7 +94,7 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         else{
             tvRange.setTextColor(ContextCompat.getColor(context, R.color.colorResting));
         }
-
+    */
 
 
         return(view);
